@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+
+  <script>
+    // Correctly using innerHTML with a stringified object or manually created string
+    const myObject = { message: "Hello, corrected!" };
+    document.getElementById("myDiv").innerHTML = JSON.stringify(myObject); //Option 1: Stringify the object
+    // Option 2 (Better): Manually create the HTML string
+    // document.getElementById("myDiv").innerHTML = "<p>" + myObject.message + "</p>";
+  </script>
+</body>
+</html>
